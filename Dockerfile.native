@@ -6,9 +6,7 @@ COPY . .
 
 RUN ./gradlew nativeCompile -Pnative
 
-FROM debian:stable-slim
-
-EXPOSE 8080
+FROM ubuntu:lunar-20230128 as runtime
 
 COPY --from=builder /app/build/native/nativeCompile/rtd-ms-alternative-gateway .
 
