@@ -45,6 +45,9 @@ microservice-chart:
   securityContext:
     allowPrivilegeEscalation: false
 
+  envConfig:
+    APPLICATIONINSIGHTS_PREVIEW_PROFILER_ENABLED: "false"
+
   envSecret:
     APPLICATIONINSIGHTS_CONNECTION_STRING: appinsights-instrumentation-key
 
